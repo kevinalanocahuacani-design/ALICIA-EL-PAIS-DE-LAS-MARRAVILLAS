@@ -12,7 +12,7 @@
 ## 📋 Información de la Entrega
 
 * **Estudiante / Equipo:** `[Tu Nombre Aquí]`
-* **🌐 Página Web Publicada:** [Ver Sitio en Vivo](https://tu-usuario.github.io/alicia-dom-js/)
+* **🌐 Página Web Publicada:** [Ver Sitio en Vivo][(https://tu-usuario.github.io/alicia-dom-js/)](https://kevinalanocahuacani-design.github.io/ALICIA-EL-PAIS-DE-LAS-MARRAVILLAS/)
 * **📦 Repositorio Git:** [Ver Repositorio](https://github.com/tu-usuario/alicia-dom-js)
 * **🎥 Video Explicativo (≤ 3 min):** [Ver Demostración en YouTube](https://youtu.be/tu-video-demostracion)
 * **📅 Fecha de Entrega:** 28 de Octubre de 2026
