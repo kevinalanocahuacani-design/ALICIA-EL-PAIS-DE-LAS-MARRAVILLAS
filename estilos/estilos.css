@@ -1,0 +1,262 @@
+/* Paleta inspirada en Alicia: tinta, rosa de corazones, crema y verde jardín. */
+:root {
+  --tinta: #25223a;
+  --rosa: #b83258;
+  --rosa-claro: #f8e8ed;
+  --crema: #fffaf0;
+  --papel: #ffffff;
+  --verde: #416b5b;
+  --verde-claro: #e8f0e8;
+  --dorado: #c49a4a;
+  --texto: #39364a;
+  --borde: #e8dfe0;
+  --sombra: 0 14px 38px rgba(37, 34, 58, 0.09);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--crema);
+  color: var(--texto);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+.envoltura {
+  width: 92%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.cabecera {
+  padding: 56px 0 38px;
+  color: #fffaf0;
+  text-align: center;
+  background: var(--tinta);
+  border-bottom: 7px solid var(--dorado);
+}
+
+.sobre-titulo, .etiqueta {
+  margin: 0 0 8px;
+  font-family: Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.17em;
+}
+
+.sobre-titulo { color: #e9c982; }
+
+h1 {
+  max-width: 850px;
+  margin: 8px auto;
+  font-size: clamp(2.1rem, 6vw, 4.1rem);
+  line-height: 1.08;
+}
+
+h1 span { color: #f3c5d2; }
+
+.introduccion {
+  margin: 18px auto 24px;
+  max-width: 620px;
+  color: #eee9f3;
+  font-size: 1.1rem;
+}
+
+nav a {
+  display: inline-block;
+  margin: 5px;
+  padding: 9px 16px;
+  color: #fffaf0;
+  text-decoration: none;
+  border: 1px solid #77718b;
+  border-radius: 30px;
+}
+
+nav a:hover, nav a:focus {
+  color: var(--tinta);
+  background: #f3c5d2;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.contenido { padding-top: 32px; padding-bottom: 45px; }
+
+.bienvenida {
+  padding: 26px 30px;
+  margin-bottom: 28px;
+  background: var(--verde-claro);
+  border-left: 5px solid var(--verde);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.bienvenida > div { display: inline-block; vertical-align: middle; }
+.bienvenida > div:first-child { width: 82%; }
+.bienvenida h2 { margin: 3px 0 8px; color: var(--tinta); }
+.bienvenida p:last-child { margin-bottom: 0; }
+.bienvenida .etiqueta { color: var(--verde); }
+
+.reloj {
+  width: 15%;
+  color: var(--verde);
+  font-size: 4rem;
+  text-align: center;
+}
+
+.ejercicio {
+  position: relative;
+  margin: 28px 0;
+  padding: 30px;
+  background: var(--papel);
+  border: 1px solid var(--borde);
+  border-radius: 18px;
+  box-shadow: var(--sombra);
+  scroll-margin-top: 20px;
+}
+
+.numero {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  color: #f1e1e5;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.encabezado-ejercicio { position: relative; max-width: 82%; }
+.encabezado-ejercicio .etiqueta { color: var(--rosa); }
+h2 { line-height: 1.25; }
+.encabezado-ejercicio h2 { margin: 4px 0 8px; color: var(--tinta); font-size: 1.8rem; }
+.encabezado-ejercicio p:last-child { margin-top: 0; }
+
+.regla {
+  margin: 20px 0;
+  padding: 15px 18px;
+  background: #f8f4e9;
+  border-left: 4px solid var(--dorado);
+  border-radius: 8px;
+}
+.regla p { margin: 5px 0 0; }
+.regla strong { color: var(--tinta); }
+
+.precios { margin: 18px 0 10px; font-size: 0; }
+.precios > div {
+  display: inline-block;
+  width: 48%;
+  margin: 1%;
+  padding: 12px 14px;
+  vertical-align: top;
+  background: #fbf2f5;
+  border: 1px solid #f0d9e1;
+  border-radius: 9px;
+  font-size: 1rem;
+}
+.precios span { display: inline-block; width: 75%; }
+.precios strong { color: var(--rosa); }
+.nota { color: #635a6b; font-size: 0.94rem; }
+
+.campos { margin: 18px 0; font-size: 0; }
+.campo {
+  display: inline-block;
+  width: 48%;
+  margin: 0 1% 15px;
+  vertical-align: top;
+  font-size: 1rem;
+}
+.campo label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--tinta);
+  font-family: Arial, sans-serif;
+  font-size: 0.92rem;
+  font-weight: bold;
+}
+input, select {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 12px;
+  color: var(--texto);
+  background: #fff;
+  border: 1px solid #cfc5d0;
+  border-radius: 8px;
+  font: inherit;
+}
+input:focus, select:focus {
+  border-color: var(--rosa);
+  outline: 3px solid #f8dce5;
+}
+button {
+  padding: 12px 20px;
+  color: white;
+  background: var(--rosa);
+  border: 0;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover { background: #8f2342; }
+button:focus { outline: 3px solid #e9a9bd; outline-offset: 3px; }
+
+.resultado {
+  min-height: 56px;
+  margin: 18px 0 0;
+  padding: 15px 17px;
+  color: var(--tinta);
+  background: #f5f2f8;
+  border: 1px solid #e5ddeb;
+  border-radius: 9px;
+  overflow-wrap: anywhere;
+}
+.resultado.error {
+  color: #84233a;
+  background: #fff0f2;
+  border-color: #e7a8b5;
+}
+.resultado.exito {
+  background: var(--verde-claro);
+  border-color: #b9d0bf;
+}
+.resultado ul { margin-bottom: 0; }
+.secuencia { max-height: 130px; overflow: auto; }
+
+.nota-final {
+  padding: 28px;
+  text-align: center;
+  background: #f8e8ed;
+  border-radius: 16px;
+}
+.nota-final .etiqueta { color: var(--rosa); }
+.nota-final h2 { margin: 4px 0; color: var(--tinta); }
+
+footer {
+  padding: 22px 4%;
+  color: #eee9f3;
+  background: var(--tinta);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 650px) {
+  .cabecera { padding: 38px 0 28px; }
+  .bienvenida, .ejercicio { padding: 22px 18px; }
+  .bienvenida > div:first-child { width: 100%; }
+  .reloj { display: none !important; }
+  .encabezado-ejercicio { max-width: 100%; padding-right: 22px; }
+  .numero { top: 14px; right: 15px; font-size: 2rem; }
+  .campo { display: block; width: 100%; margin: 0 0 14px; }
+  .precios > div { display: block; width: 100%; margin: 8px 0; }
+  .precios span { width: 78%; }
+  nav a { padding: 8px 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

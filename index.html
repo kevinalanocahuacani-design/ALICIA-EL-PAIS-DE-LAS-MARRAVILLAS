@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tres ejercicios interactivos de JavaScript inspirados en Alicia en el país de las maravillas.">
+  <title>Alicia en el País de las Maravillas | Laboratorio JavaScript</title>
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <script src="java/java.js" defer></script>
+</head>
+<body>
+  <header class="cabecera">
+    <div class="envoltura">
+      <p class="sobre-titulo">PROGRAMACIÓN WEB I · LABORATORIO INTERACTIVO</p>
+      <h1>Alicia en el <span>País de las Maravillas</span></h1>
+      <p class="introduccion">Tres desafíos mágicos para practicar formularios, validaciones y JavaScript.</p>
+      <nav aria-label="Navegación principal">
+        <a href="#pocion">La poción</a>
+        <a href="#merienda">La merienda</a>
+        <a href="#reina">La Reina</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="envoltura contenido">
+    <section class="bienvenida">
+      <div>
+        <p class="etiqueta">SIGUE AL CONEJO BLANCO</p>
+        <h2>¿Lista para la aventura?</h2>
+        <p>Completa cada formulario y descubre cómo las estructuras secuenciales, condicionales y repetitivas dan vida a los retos de Alicia.</p>
+      </div>
+      <div class="reloj" aria-hidden="true">♧</div>
+    </section>
+
+    <section class="ejercicio" id="pocion">
+      <div class="numero">01</div>
+      <div class="encabezado-ejercicio">
+        <p class="etiqueta">IF · ELSE IF · ELSE</p>
+        <h2>La poción mágica de Alicia</h2>
+        <p>Alicia necesita ajustar su tamaño para atravesar la puerta del jardín.</p>
+      </div>
+      <div class="regla">
+        <strong>Regla mágica</strong>
+        <p>Altura final = altura inicial + (poción en ml × 2)</p>
+        <p>La puerta mide <strong>120 cm</strong>. La poción permitida va de <strong>0 a 100 ml</strong>.</p>
+      </div>
+      <form id="form-pocion" novalidate>
+        <div class="campos">
+          <div class="campo">
+            <label for="altura">Altura inicial de Alicia (cm)</label>
+            <input id="altura" name="altura" type="number" min="1" max="300" step="any" placeholder="Ej. 90" required>
+          </div>
+          <div class="campo">
+            <label for="cantidad-pocion">Cantidad de poción (ml)</label>
+            <input id="cantidad-pocion" name="cantidad-pocion" type="number" min="0" max="100" step="any" placeholder="Ej. 15" required>
+          </div>
+        </div>
+        <button type="submit">Calcular tamaño <span aria-hidden="true">→</span></button>
+      </form>
+      <p id="resultado-pocion" class="resultado" role="status" aria-live="polite">Tu resultado aparecerá aquí.</p>
+    </section>
+
+    <section class="ejercicio" id="merienda">
+      <div class="numero">02</div>
+      <div class="encabezado-ejercicio">
+        <p class="etiqueta">SWITCH · CONDICIONALES</p>
+        <h2>La merienda del Sombrerero Loco</h2>
+        <p>Elige una bebida y calcula la cuenta de la mesa del té.</p>
+      </div>
+      <div class="precios">
+        <div><span>🍵 Té de rosas</span><strong>Bs 8</strong></div>
+        <div><span>☕ Café del Gato</span><strong>Bs 12</strong></div>
+        <div><span>🍋 Limonada mágica</span><strong>Bs 10</strong></div>
+        <div><span>🥛 Leche de luna</span><strong>Bs 7</strong></div>
+      </div>
+      <p class="nota">Descuento: 10% si compras 5 tazas o más. Máximo: 20 tazas por pedido.</p>
+      <form id="form-merienda" novalidate>
+        <div class="campos">
+          <div class="campo">
+            <label for="nombre-invitado">Nombre del invitado</label>
+            <input id="nombre-invitado" name="nombre-invitado" type="text" maxlength="60" placeholder="Ej. Alicia" required>
+          </div>
+          <div class="campo">
+            <label for="bebida">Bebida</label>
+            <select id="bebida" name="bebida" required>
+              <option value="">-- Selecciona una bebida --</option>
+              <option value="te">Té de rosas</option>
+              <option value="cafe">Café del Gato</option>
+              <option value="limonada">Limonada mágica</option>
+              <option value="leche">Leche de luna</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="tazas">Cantidad de tazas (1–20)</label>
+            <input id="tazas" name="tazas" type="number" min="1" max="20" step="1" placeholder="Ej. 5" required>
+          </div>
+        </div>
+        <button type="submit">Calcular cuenta <span aria-hidden="true">→</span></button>
+      </form>
+      <p id="resultado-merienda" class="resultado" role="status" aria-live="polite">La cuenta de la merienda aparecerá aquí.</p>
+    </section>
+
+    <section class="ejercicio" id="reina">
+      <div class="numero">03</div>
+      <div class="encabezado-ejercicio">
+        <p class="etiqueta">FOR · IF / ELSE</p>
+        <h2>El desafío de la Reina de Corazones</h2>
+        <p>La Reina exige que clasifiques las cartas numeradas del 1 hasta el número elegido.</p>
+      </div>
+      <div class="regla">
+        <strong>Tu misión</strong>
+        <p>Separar pares e impares, contar las cartas de cada grupo, sumar sus valores y determinar qué grupo tiene la suma mayor.</p>
+      </div>
+      <form id="form-reina" novalidate>
+        <div class="campos">
+          <div class="campo">
+            <label for="numero-cartas">Cantidad de cartas (1–100)</label>
+            <input id="numero-cartas" name="numero-cartas" type="number" min="1" max="100" step="1" placeholder="Ej. 10" required>
+          </div>
+        </div>
+        <button type="submit">Analizar cartas <span aria-hidden="true">→</span></button>
+      </form>
+      <div id="resultado-reina" class="resultado" role="status" aria-live="polite">El análisis de la Reina aparecerá aquí.</div>
+    </section>
+
+    <section class="nota-final">
+      <p class="etiqueta">FIN DE LA AVENTURA</p>
+      <h2>La lógica también es magia.</h2>
+      <p>Prueba distintos valores en los tres ejercicios. Los resultados se actualizan sin recargar la página.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Actividad práctica · HTML5, CSS3 y JavaScript nativo · Sin frameworks ni bibliotecas</p>
+  </footer>
+</body>
+</html>
